@@ -17,30 +17,49 @@
       <!--main container -->
       <div class="flex flex-col lg:flex-row">
         <!-- shape conatainer -->
-        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- first card -->
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Triangle card -->
           <div class="card w-96 bg-base-100 shadow-xl">
             <figure>
-              <img
-                src="./images/triangle.png"
-                alt="Shoes"
-              />
+              <img src="./images/triangle.png" alt="Shoes" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Triangle</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+              <p>Area (A) = 0.5 X b X h</p>
+              <p>
+                <input
+                  type="text"
+                  class="border w-24 bg-gray-200 text-xl px-2"
+                  placeholder="base"
+                  name=""
+                  id="triangle-base"
+                />
+                <span class="ml-2">cm</span>
+                <input
+                  type="text"
+                  class="border w-24 bg-gray-200 ml-4 text-xl px-2"
+                  placeholder="height"
+                  name=""
+                  id=""
+                />
+                <span class="ml-2">cm</span>
+              </p>
+              <div class="card-actions">
+                <button
+                  onclick="calculateTriangleArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
-           <!-- second card -->
-           <div class="card w-96 bg-base-100 shadow-xl">
+          <!-- second card -->
+          <div class="card w-96 bg-base-100 shadow-xl">
             <figure>
-              <img
-                src="./images/rectangle.png"
-                alt="Shoes"
-              />
+              <img src="./images/rectangle.png" alt="Shoes" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
@@ -50,14 +69,10 @@
               </div>
             </div>
           </div>
-           <!-- third
-            card -->
-           <div class="card w-96 bg-base-100 shadow-xl">
+          <!-- third card -->
+          <div class="card w-96 bg-base-100 shadow-xl">
             <figure>
-              <img
-                src="./images/rectangle.png"
-                alt="Shoes"
-              />
+              <img src="./images/rectangle.png" alt="Shoes" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
@@ -74,5 +89,6 @@
         </div>
       </div>
     </main>
+    <script src="./scripts/area-calculator.js"></script>
   </body>
 </html>

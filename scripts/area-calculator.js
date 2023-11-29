@@ -32,6 +32,11 @@ function calculateRectangleArea() {
     const length = parseFloat(lengthValueText);
     console.log(length);
 
+    // validate input
+    if (isNaN(width) || isNaN(length)) {
+        alert('Please enter a number')
+    }
+
     // calculate rectangle area
     const area = width * height;
 
@@ -44,9 +49,13 @@ function calculateRectangleArea() {
 // reuseable function --> reduce duplicate code
 function calculateParallelogramArea() {
     const base = getInputValue('Parallelogram-base');
-    // console.log(base);
     const height = getInputValue('Parallelogram-height');
-    // console.log(height);
+    
+    // validate
+    if (isNaN(base) || isNaN(height)) {} {
+        alert('Please insert number');
+        return
+    }
     const area = base * height;
     setElementInnerText('Parallelogram-area', area);
 }
@@ -74,3 +83,9 @@ function setElementInnerText(elementId, area) {
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+
+/* data validation 
+1. set the proper type of the input field(number, data, email)
+2.check type using typeOf(typeof)
+3. isNaN is checking whether the input is not a number or not.
+*/
